@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Details</title>
+<link rel="stylesheet" href="../css/hospital.css">
+</head>
+<body>
+
+<h2>Patient Details</h2>
+
+<table border="1">
+<tr><th>ID</th><th>Name</th><th>Gender</th><th>Date of Birth</th><th>Contact Number</th><th>Address</th><th>Medical History</th></tr>
+
+<th:block th:each="patient : ${patients}">
+<tr><td th:text="${patient.id}"></td><td th:text="${patient.name}"></td><td th:text="${patient.gender}"></td><td th:text="${patient.dob}"></td><td th:text="${patient.contactNumber}"></td><td th:text="${patient.address}"></td><td th:text="${patient.medicalHistory}"></td></tr>
+</th:block>
+
+</table>
+
+<a href="/">Add Another Patient</a>
+
+</body>
+</html>

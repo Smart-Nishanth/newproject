@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient</title>
+    <link rel="stylesheet" href="../css/hospital.css">
+</head>
+<body>
+
+<h2>Add New Patient</h2>
+
+<form action="/patients" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="tel" id="contactNumber" name="contactNumber" required><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea><br>
+
+    <label for="medicalHistory">Medical History:</label>
+    <textarea id="medicalHistory" name="medicalHistory"></textarea><br>
+
+    <button type="submit">Add Patient</button>
+</form>
+
+<a href="/patients">View Patients</a>
+
+</body>
+</html>
